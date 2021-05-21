@@ -40,9 +40,13 @@
     "sass-loader": "^8.0",
     "stylelint": "^13.2",
     "stylelint-config-recommended": "^3.0",
+    "svg-inline-loader": "^0.8.2",
     "terser-webpack-plugin": "^2.3",
     "webpack": "^4.0",
     "webpack-cli": "^3.3",
     "webpack-dev-server": "^3.10"
+  },
+  "dependencies": {
+    "lodash.assign": "^4.2.0"
   }
 }

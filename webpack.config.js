@@ -18,11 +18,11 @@ if (process.env.npm_lifecycle_event === 'dist') {
 }
 
 module.exports = {
-  entry: path.resolve(__dirname, 'src/chromecast.js'),
+  entry: path.resolve(__dirname, 'src/chromecast.js'), // eslint-disable-line
   devtool: 'source-map',
   optimization: optimization,
   output: {
-    path: path.resolve(__dirname, 'lib'),
+    path: path.resolve(__dirname, 'lib'), // eslint-disable-line
     filename: outputFile,
     library: 'ChromecastPlugin',
     libraryExport: 'default',
@@ -36,7 +36,7 @@ module.exports = {
           loader: 'babel-loader'
         },
         include: [
-          path.resolve(__dirname, 'src')
+          path.resolve(__dirname, 'src') // eslint-disable-line
         ],
       },
       {
@@ -78,7 +78,7 @@ module.exports = {
   },
   devServer: {
     contentBase: [
-      path.resolve(__dirname, 'public'),
+      path.resolve(__dirname, 'public'), // eslint-disable-line
     ],
     // publicPath: '/js/',
     disableHostCheck: true, // https://github.com/webpack/webpack-dev-server/issues/882
