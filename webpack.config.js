@@ -9,7 +9,6 @@ if (process.env.npm_lifecycle_event === 'dist') {
   outputFile = name + '.min.js'
   optimization.minimizer = [
     new TerserPlugin({
-      cache: true, // TODO: set to false if Webpack upgraded to 5.x ?
     }),
   ]
 } else {

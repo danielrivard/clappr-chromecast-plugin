@@ -356,6 +356,7 @@ export default class ChromecastPlugin extends UICorePlugin {
     let mediaInfo = new chrome.cast.media.MediaInfo(src)
     mediaInfo.contentType = this.options.contentType || mimeType
     mediaInfo.customData = this.options.customData
+    mediaInfo.streamType = this.playback.getPlaybackType() === ChromecastPlayback.LIVE ? chrome.cast.media.StreamType.LIVE : chrome.cast.media.StreamType.BUFFERED
     let metadata = this.createMediaMetadata()
     mediaInfo.metadata = metadata
     return mediaInfo
